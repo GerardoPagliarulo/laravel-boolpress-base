@@ -16,6 +16,16 @@
                             <h4>{{$post->title}}</h4>
                             <p>{{$post->body}}</p>
                         </li>
+                        <h3>Comments:</h3>
+                        <ul>
+                            @foreach ($post->comments as $comment)
+                                <li>
+                                    <h4>{{$comment->name}}</h4>
+                                    <p>{{$comment->body}}</p>
+                                    <p>Date of create: {{$comment->created_at}} - Last edit: {{$comment->updated_at}}</p>
+                                </li>
+                            @endforeach
+                        </ul>            
                     @endforeach
                 </ul>
             </div>

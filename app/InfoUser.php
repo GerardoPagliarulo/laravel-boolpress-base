@@ -15,6 +15,7 @@ class InfoUser extends Model
     // Timestamps overwriting
     public $timestamps = false;
     // DB relationship
+    // Relation table User
     public function user() {
         return $this->belongsTo('App\User');
     }
