@@ -129,7 +129,7 @@ class PostController extends Controller
             return redirect()->route('posts.index')->with('post-deleted', $title);
         }
     }
-        // UTILITIES
+    // UTILITIES
     // Function: Validation Rules
     private function validationRules($id = null) {
         return [
