@@ -1,6 +1,6 @@
 @include('shared.header')
 {{-- MAIN CONTENT --}}
-<main>
+<main class="container">
     @yield('main-content')
 </main>
 @include('shared.footer')

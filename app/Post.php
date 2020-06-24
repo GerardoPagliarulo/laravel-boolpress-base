@@ -9,7 +9,8 @@ class Post extends Model
     protected $fillable = [
         'user_id',
         'title',
-        'body'
+        'body',
+        'slug'
     ];
     // DB relationship
     // Relation table Users (many to one)
@@ -19,5 +20,9 @@ class Post extends Model
     // Relation table Comments (one to many)
     public function comments() {
         return $this->hasMany('App\Comment');
+    }
+    // Relation table Tags (many to many)
+    public function tags() {
+        return $this->belongsToMany('App\Tag');
     }    
 }
